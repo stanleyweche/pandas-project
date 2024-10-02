@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plit
 
 # Sample dataset
 data = {
@@ -21,26 +21,26 @@ total_sales = df[['Product_A', 'Product_B', 'Product_C', 'Product_D']].sum()
 print(total_sales)
 
 # 3. Plot a line graph showing the monthly sales trend for each product
-plt.figure(figsize=(10, 6))
+plit.figure(figsize=(10, 6))
 for product in ['Product_A', 'Product_B', 'Product_C', 'Product_D']:
-    plt.plot(df['Month'], df[product], marker='o', label=product)
-plt.xlabel('Month')
-plt.ylabel('Sales')
-plt.title('Monthly Sales Trend')
-plt.legend()
-plt.grid(True)
-plt.show()
+    plit.plot(df['Month'], df[product], marker='o', label=product)
+plit.xlabel('Month')
+plit.ylabel('Sales')
+plit.title('Monthly Sales Trend')
+plit.legend()
+plit.grid(True)
+plit.show()
 
 # 4. Create a bar chart comparing the total sales of each product
-plt.figure(figsize=(8, 5))
-plt.bar(total_sales.index, total_sales.values, color=['blue', 'green', 'red', 'purple'])
-plt.xlabel('Product')
-plt.ylabel('Total Sales')
-plt.title('Total Sales Comparison')
-plt.show()
+plit.figure(figsize=(8, 5))
+plit.bar(total_sales.index, total_sales.values, color=['blue', 'green', 'red', 'purple'])
+plit.xlabel('Product')
+plit.ylabel('Total Sales')
+plit.title('Total Sales Comparison')
+plit.show()
 
 # 5. Generate a pie chart showing the percentage contribution of each product to the total sales
-plt.figure(figsize=(8, 8))
-plt.pie(total_sales, labels=total_sales.index, autopct='%1.1f%%', colors=['blue', 'green', 'red', 'purple'])
-plt.title('Sales Contribution by Product')
-plt.show()
+plit.figure(figsize=(8, 8))
+plit.pie(total_sales, labels=total_sales.index, autopct='%1.1f%%', colors=['blue', 'green', 'red', 'purple'])
+plit.title('Sales Contribution by Product')
+plit.show()
